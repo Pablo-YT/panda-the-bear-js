@@ -19,7 +19,11 @@ title.innerText = "Sweg"
 color.style.backgroundColor = "red"
 
 5.
-
+var highlight = document.querySelectorAll('.highlight')
+for (let i = 0; i < highlight.length; i++) { 
+    let item = highlight[i]; 
+    item.style.color = 'tomato'; 
+}
 
 6.var stuff = document.querySelector("h1")
 undefined
@@ -58,7 +62,42 @@ var submit1 = document.querySelector(#submit)
 submit1.setAttribute("value", "En garde")
 
 13.
-
+var disable = document.querySelector("#submit")
+disable.setAttribute("type",disable)
 
 
 14.
+var disable = document.querySelector(".bio-info")
+disable.style.display = "None"
+
+Part 2 
+
+1.
+var remove = document.querySelector('#time-travel')
+remove.style.display = "none"
+# var div = document.querySelector('#time-travel'); var title = div.querySelector('.bar-title'); div.removeChild(title)
+
+2.
+var image = document.querySelector('.portfolio-image#right-image img')
+nodeImage = image.cloneNode(true)
+nodeImage.appendChild(image)
+
+3.
+let portfolioContainer = document.querySelector('.portfolio-container'); 
+    let pikachuImage = document.querySelector('.portfolio-image#right-image img'); 
+    for (let i = 1; i <= 10; i++) { let dupPikachuImage = pikachuImage.cloneNode(true); portfolioContainer.appendChild(dupPikachuImage); }
+
+4. 
+const listItem = document.createElement('li')
+const leftspan = document.createElement('span')
+var lastUpdated = document.createTextNode('Page last updated on');
+leftspan.appendChild(lastUpdated)
+listItem.appendChild(leftspan)
+let bio = document.querySelector('ul.bio-info')
+bio.appendChild(listItem)
+var time = new Date()
+
+const rightspan = document.createElement('span')
+var timeText = document.createTextNode(time)
+rightspan.appendChild(timeText)
+listItem.appendChild(rightspan)
